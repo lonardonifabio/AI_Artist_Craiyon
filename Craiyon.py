@@ -1,4 +1,4 @@
-from craiyon.py import Craiyon
+from craiyon import Craiyon
 from PIL import Image # pip install pillow
 from io import BytesIO
 import streamlit as st
