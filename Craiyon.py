@@ -9,7 +9,7 @@ def Generate(request):
     images = result.images
     return images
 
-generator = Craiyon()
+generator = Craiyon(model_version="35s5hfwn9n78gb06")
 st.title("AI Artist")
 st.header("Hello, my name is Craiyon and I'm an AI digital artist!")
 request = st.text_input("I am able to draw everything. Do you want to test me?","Ask me to draw something for you!")
