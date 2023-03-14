@@ -15,7 +15,7 @@ st.header("Hello, my name is Craiyon and I'm an AI digital artist!")
 request = st.text_input("I am able to draw everything. Do you want to test me?","Ask me to draw something for you!")
 if st.button("Draw"):
     image_files = Generate(request)
-    st.image(Image.open(BytesIO(base64.decodebytes(image_files[0]))))
+    st.image(Image.open(BytesIO(base64.decodebytes(image_files[1].encode("utf-8")))))
     #col1, col2, col3 = st.columns(3)
     #with col1:
         #st.image(Image.open(BytesIO(base64.decodebytes(0))))
