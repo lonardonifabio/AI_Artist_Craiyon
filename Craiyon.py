@@ -3,6 +3,7 @@ from PIL import Image # pip install pillow
 from io import BytesIO
 import streamlit as st
 import base64
+
 def Generate(request):
     generator = Craiyon() # Instantiates the api wrapper
     result = generator.generate(request) # Generates 9 images by default
@@ -28,4 +29,4 @@ if st.button("Draw"):
         st.image(Image.open(BytesIO(base64.decodebytes(image_files[6].encode("utf-8")))))
         st.image(Image.open(BytesIO(base64.decodebytes(image_files[7].encode("utf-8")))))
         st.image(Image.open(BytesIO(base64.decodebytes(image_files[8].encode("utf-8")))))
-st.caption("This webpage has been developed by [Fabio Lonardoni](https://www.fabiolonardoni.it)")
+st.write("This webpage has been developed by Fabio Lonardoni. Check out this [link](https://www.fabiolonardoni.it)")
